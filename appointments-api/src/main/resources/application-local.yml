@@ -1,0 +1,12 @@
+spring:
+  profiles: local
+
+externals:
+  apis:
+    doctor-api:
+      host: "http://localhost"
+      port: "9092"
+    patient-api:
+      host: "http://localhost"
+      port: "9093"
+

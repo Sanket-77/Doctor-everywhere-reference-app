@@ -1,0 +1,44 @@
+server:
+  port: '9091'
+
+spring:
+  profiles:
+    active: local
+
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@cluster1.ouyweug.mongodb.net/Doctor-Everywhere-DB?retryWrites=true&w=majority
+
+springdoc:
+  swagger-ui:
+    path: swagger-ui.html
+
+logging:
+  level:
+    web: TRACE
+    org:
+      springframework:
+        web: TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+#  h2:
+#    console.enabled: true
+#    console.path: /h2-console
+#    console.settings.trace: false
+#    console.settings.web-allow-others: false
+#  datasource:
+#    url: jdbc:h2:mem:mydb # jdbc:h2:file:/data/demo if persistence is required for file
+#    username: root
+#    password: demo
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+

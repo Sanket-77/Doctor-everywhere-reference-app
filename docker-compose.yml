@@ -1,0 +1,30 @@
+version: '3.9'
+
+# Define services
+services:
+
+  appointments:
+    image: docker.io/sanketdoc7/appointments-api:latest
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    ports:
+      - "9091:9091"
+    restart: always
+    networks:
+      - backend
+
+  doctor:
+    image: docker.io/sanketdoc7/doctor-api:latest
+    ports:
+      - "9092:9092"
+    restart: always
+    networks:
+      - backend
+
+  patient:
+    image: docker.io/sanketdoc7/patient-api:latest
+    ports:
+      - "9093:9093"
+    restart: always
+    networks:
+      - backend

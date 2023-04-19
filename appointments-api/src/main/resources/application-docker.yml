@@ -1,0 +1,12 @@
+spring:
+  profiles: docker
+
+externals:
+  apis:
+    doctor-api:
+      host: "http://doctor"
+      port: "9092"
+    patient-api:
+      host: "http://patient"
+      port: "9093"
+
